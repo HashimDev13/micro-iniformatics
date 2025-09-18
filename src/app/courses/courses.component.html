@@ -1,0 +1,92 @@
+<div class="bg-main !bg-blend-color-burn bg-black/50">
+    <!-- <div class="absolute top-0 right-0 left-0 bottom-0 bg-black/50 "></div> -->
+    <section class="pt-32 z-[20] relative">
+        <div class="max-w-7xl px-5 md:px-0 mx-auto py-20">
+            <p class="text-3xl font-bold text-white">This is Course Name</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-2">
+
+                <div *ngFor="let course of courses" (click)="openDetail(course?.id)" class="bagde-flag-wrap relative">
+                    <!-- badge -->
+                    <div class="bagde-flag"
+                        [ngClass]="{ 'bg-[#FF8000]': source == 'paid', 'bg-[#01B54F]' : source == 'unPaid' }"></div>
+                    <div class="absolute right-[-12px] top-[10px] shadow-lg z-20 rounded-sm pr-[18px]  px-2"
+                        [ngClass]="{ 'bg-[#FF8000]': course?.status == 'paid', 'bg-[#01B54F]' : course?.status == 'unpaid' }">
+                        <p class="text-white font-semibold text-lg">
+                            {{course?.status}}
+                        </p>
+                    </div>
+                    <div class=" rounded-3xl  overflow-hidden box-shadow cursor-pointer">
+                        <div class="relative group w-full flex justify-center items-center h-[240px]">
+                            <img src="{{course?.image_url}}"
+                                class="absolute top-0 left-0 rounded-t-3xl  w-full h-full object-cover brightness-[0.8] group-hover:brightness-[1] group-hover:scale-[1.05] transition duration-500"
+                                alt="">
+
+
+
+                            <div class="absolute inset-0 z-10 flex justify-center items-center">
+                                <i
+                                    class="bi bi-play-fill text-7xl group-hover:text-8xl transition-[600] duration-900 text-[#DAEDE9] cursor-pointer"></i>
+                            </div>
+                        </div>
+                        <div class="bg-gray/50 backdrop-blur-lg pb-7 rounded-b-xl p-4 relative z-10">
+                            <p class="font-bold text-2xl mt-4 text-white m-0">{{course?.title}}</p>
+                            <p class="text-[#4F4F4F] m-0 leading-[15px]">Class # 1</p>
+                            <p class="text-[#DAEDE9] mt-5 line-clamp-2 h-[42px]">
+                                {{ course?.description }}
+                            </p>
+
+                            <div
+                                class="bg-[#007ACC] inline-block rounded-3xl px-2 mt-4 text-white font-semibold ml-[-30px] pl-[30px]">
+                                Top Rated</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!-- detail Popup -->
+
+<div *ngIf="isPopupOpen" 
+     class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+  
+  <div class="relative w-[600px] bg-[#0b0b0d] rounded-2xl  box-shadow p-6">
+    
+    <!-- Close Button -->
+    <button (click)="close()" 
+            class="absolute top-3 right-3 text-white hover:text-red-400 text-xl">&times;</button>
+    
+    <!-- Badge -->
+    <span class="absolute top-3 left-3 px-3 py-1 text-xs font-bold rounded-md"
+          [ngClass]="coursesDetail?.status?.isPaid ? 'bg-orange-500 text-white' : 'bg-green-500 text-white'">
+      {{ coursesDetail?.status?.isPaid ? 'Paid' : 'Unpaid' }}
+    </span>
+    
+    <!-- Course Thumbnail -->
+    <div class="mb-4">
+      <img [src]="coursesDetail?.link" alt="Course Image" class="rounded-xl w-full h-48 object-cover">
+    </div>
+    
+    <!-- Title -->
+    <h2 class="text-white text-2xl font-bold mb-2">{{ coursesDetail?.title }}</h2>
+    
+    <!-- Description -->
+    <p class="text-gray-300 mb-4">{{ coursesDetail?.description }}</p>
+    
+    <!-- Extra Info -->
+    <div class="flex justify-between text-sm text-gray-400">
+      <p>Class #: {{ coursesDetail?.classNumber }}</p>
+      <p>Rating: ⭐ {{ coursesDetail?.rating }}</p>
+    </div>
+    
+    <!-- Action Buttons -->
+    <div class="mt-6 flex justify-end space-x-3">
+      <button class="px-4 py-2 rounded-lg bg-gray-700 hover:bg-gray-600 text-white">Close</button>
+      <button class="px-4 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-white">Start Course</button>
+    </div>
+  </div>
+</div>

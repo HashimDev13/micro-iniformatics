@@ -1,0 +1,23 @@
+.fix-bg {
+    background-image: url('/assets/mini-header.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+    background-color: #00000090;
+    // height: 40vh;
+}
+
+.bagde-flag {
+    content: "";
+    position: absolute;
+    top: 32px;
+    right: -7px;
+    width: 19px;
+    height: 19px;
+    border-style: solid;
+    opacity: 0.8;
+    rotate: 39deg;
+    z-index: -1;
+}

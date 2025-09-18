@@ -1,0 +1,372 @@
+<div class="bg-main">
+
+
+  <!-- header -->
+  <section>
+
+    <div id="home" class="w-full h-[80vh]  lg:h-screen relative overflow-hidden">
+      <!-- <video #videoPlayer [muted]="true" autoplay loop playsinline class="w-full h-[100%] lg:h-full object-cover">
+        <source src="assets/bg.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> -->
+      <!-- Background Layer -->
+      <!-- <div class=" absolute top-0 left-0 right-0 bottom-0 inset-0 z-[9] bg-black/50"></div> -->
+
+      <!-- Content Layer -->
+      <div class="absolute inset-0 z-10 flex justify-between items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 w-full gap-8 items-center px-4 max-w-7xl mx-auto">
+
+          <!-- Text Section -->
+          <div class="wow animate__animated animate__fadeInLeft text-white">
+            <p class="inline ">Join Our Team</p>
+            <h1 class="text-4xl mt-2 md:text-4xl lg:text-7xl font-bold leading-[32px] md:leading-tight">
+              <span class="text-[#FF8000]">AI with</span> <br>
+              <span class="text-[#007ACC]">Bioinformatics </span>
+            </h1>
+            <p class="mt-4 text-base md:text-lg text-[#FCFCFD]">
+              Your road to unforgettable memories starts here. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Molestiae exercitationem labore facere ex neque fugiat atque temporibus repudiandae natus.
+            </p>
+            <div class="mt-6">
+
+              <button routerLink="/course"
+                class="bg-[#FF8000] hover:bg-blue-400 text-white font-semibold py-1 px-6 rounded-xl">
+                Reach Us
+              </button>
+
+            </div>
+          </div>
+
+          <!-- Image Section -->
+          <div
+            class="flex animation justify-center hidden md:flex items-center relative wow animate__animated animate__fadeInRight">
+            <img src="/assets/header-img.png" alt="Header" class="w-full max-w-md">
+            <img src="/assets/dec.png" alt="Header" class="w-full absolute max-w-md">
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- services -->
+  <section id="services" class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-[#FF8000]">Our Scientific & Data Solutions</h2>
+        <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+          Empowering life sciences with advanced analytics, AI, and bioinformatics to transform data into discovery.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let service of services"
+          class="bg-gray/5 backdrop-blur-lg rounded-2xl shadow-lg p-6 border border-[#0B0C22] hover:shadow-xl transition box-shadow transform hover:-translate-y-2 wow animate__animated animate__zoomIn">
+
+          <!-- Icon -->
+          <div class="text-[#007ACC] text-3xl mb-4 flex justify-start">
+            <i [class]="service.icon"></i>
+          </div>
+
+          <!-- Title -->
+          <h3 class="text-xl font-semibold text-white mb-3 text-start">{{ service.title }}</h3>
+
+          <!-- Description -->
+          <ul class="list-disc  list-inside text-white space-y-1 text-sm">
+            <li *ngFor="let item of service.points">{{ item }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- mission -->
+  <section id="mission" class=" py-20 px-4 overflow-hidden">
+    <div class="w-full max-w-7xl px-4 md:px-5 mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-end order-last lg:order-first">
+          <div
+            class="wow animate__animated hidden md:block animate__fadeInUp pt-10 sm:pt-24 flex justify-start sm:justify-end lg:justify-center">
+            <img class="rounded-xl object-cover box-shadow w-full max-w-[300px] h-[280px] sm:max-w-full"
+              src="/assets/DNA.jpg" alt="about Us image" />
+          </div>
+          <div class="flex justify-end sm:justify-start  wow animate__animated animate__fadeInDown">
+            <img class="rounded-xl object-cover box-shadow w-full md:max-w-[300px] max-h-[430px] sm:max-w-full"
+              src="/assets/robo-1.avif" alt="about Us image" />
+          </div>
+        </div>
+
+
+        <div class=" wow animate__animated animate__fadeInRight flex flex-col items-center lg:items-start gap-10">
+          <div class=" flex flex-col gap-8 w-full items-center lg:items-start text-center lg:text-left">
+            <p class="border-b-2 border-[#FF8000] text-[#FF8000] inline">Our Mission</p>
+            <p class="text-2xl sm:text-3xl font-bold text-white font-manrope leading-normal">
+              Our Mission at <span class="text-[#FF8000]">Microinformatics</span>
+            </p>
+            <p class="text-sm text-white sm:text-base font-normal leading-relaxed max-w-xl">
+              Our mission is to offer trusted, efficient, and worry-free transport services that prioritize
+              safety,
+              punctuality, and customer satisfaction.
+            </p>
+          </div>
+
+
+          <div class="flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-10 w-full">
+            <div class="flex flex-col items-center lg:items-start text-[#007ACC]">
+              <h3 class=" text-3xl sm:text-4xl font-bold font-manrope counter">
+                <span class="text-[#007ACC]">13+</span>
+              </h3>
+              <h6 class="text-sm sm:text-base font-normal">Years of Experience</h6>
+            </div>
+
+            <div class="flex flex-col items-center lg:items-start  text-[#007ACC]">
+              <h4 class="text-white text-3xl sm:text-4xl font-bold font-manrope counter">
+                <span class="text-[#007ACC]">52+</span>
+              </h4>
+              <h6 class="text-sm sm:text-base font-normal">Happy Clients</h6>
+            </div>
+          </div>
+
+
+          <a href="#contact">
+            <button type="button"
+              class="rounded-lg text-white bg-[#FF8000] px-6 py-2 hover:bg-[#D2A21C] text-sm sm:text-base">
+              Contact Us
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- skills -->
+  <section id="values" class="fix-bg flex flex-col justify-center items-center">
+    <div class="max-w-7xl mx-auto">
+      <p class="text-center text-white font-bold text-xl md:text-3xl">What Skills We Have</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 mt-10 gap-10">
+        <div
+          class=" animate__animated animate__flipOutX wow p-4 rounded-[20px] size-56 bg-gray/5 box-shadow backdrop-blur-lg mx-auto flex justify-center items-center flex-col">
+          <img src="assets/dna.png" class="w-[100px]" alt="">
+          <p class="!text-[#FF8000] text-xl font-bold text-center mt-8">Bio Technology </p>
+        </div>
+        <div
+          class=" animate__animated animate__flipOutX wow p-4 rounded-[20px] size-56 bg-gray/5 box-shadow backdrop-blur-lg mx-auto flex justify-center items-center flex-col">
+          <img src="assets/biology.png" class="w-[100px]" alt="">
+          <p class="!text-[#FF8000] text-xl font-bold text-center mt-8">Bio Technology </p>
+        </div>
+        <div
+          class=" animate__animated animate__flipOutX wow p-4 rounded-[20px] size-56 bg-gray/5 box-shadow backdrop-blur-lg mx-auto flex justify-center items-center flex-col">
+          <img src="assets/bacteria.png" class="w-[100px]" alt="">
+          <p class="!text-[#FF8000] text-xl font-bold text-center mt-8">Bio Technology </p>
+        </div>
+        <div
+          class=" animate__animated animate__flipOutX wow p-4 rounded-[20px] size-56 bg-gray/5 box-shadow backdrop-blur-lg mx-auto flex justify-center items-center flex-col">
+          <img src="assets/ai.png" class="w-[100px]" alt="">
+          <p class="!text-[#FF8000] text-xl font-bold text-center mt-8">Bio Technology </p>
+        </div>
+        <div
+          class=" animate__animated animate__flipOutX wow p-4 rounded-[20px] size-56 bg-gray/5 box-shadow backdrop-blur-lg mx-auto flex justify-center items-center flex-col">
+          <img src="assets/bacteria.png" class="w-[100px]" alt="">
+          <p class="!text-[#FF8000] text-xl font-bold text-center mt-8">Bio Technology </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Biology Section -->
+  <section class="overflow-hidden  py-10 md:py-20" id="about">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-[#FF8000]">Our Scientific & Data Solutions</h2>
+        <p class="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+          Empowering life sciences with advanced analytics, AI, and bioinformatics to transform data into discovery.
+        </p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-y-10">
+        <div class="flex justify-center items-center">
+          <img src="/assets/biology.avif"
+            class="w-[95%] md:w-full rounded-[20px] md:rounded-[40px] mt-8 md:mt-0 h-[85%] object-cover aos-init aos-animate"
+            alt="" data-aos="fade-right" data-aos-duration="2000">
+        </div>
+        <div class="md:pl-10 flex flex-col justify-center">
+          <div class="flex flex-col justify-center aos-init aos-animate" data-aos="fade-left" data-aos-duration="2000">
+            <p class="text-3xl lg:text-4xl">
+              <span class="text-[#007ACC] font-bold">OTK Distribution</span>–Reliable Packaging Solutions
+            </p>
+            <p class="text-gray-600 w-full md:w-[85%] mt-5">
+              At OTKDistribution, we specialize in high-quality disposable
+              packaging for the food industry. From pizza boxes and burger
+              containers to eco-friendly takeaway solutions, we provide
+              durable and sustainable options. Our free delivery service
+              ensures you get the right packaging when you need it, helping
+              your business run smoothly. Whether you're a small café or a
+              large restaurant, OTKDistribution is your trusted packaging
+              partner.
+            </p>
+          </div>
+          <div>
+            <a href="#contact-us">
+              <button data-aos="fade-left" data-aos-duration="2000"
+                class="mt-5 rounded-lg bg-[#007ACC] px-3 py-2 text-white font-bold aos-init aos-animate">
+                Order Now
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ's -->
+  <section id="whyus" class=" text-white px-4 py-12 md:py-20">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <!-- Left: Title and Image -->
+      <div class="space-y-6 text-center md:text-left">
+
+        <div class=" animate__animated animate__fadeInLeft wow">
+          <img src="/assets/faq.png" alt="FAQ Illustration" class="w-[88] mx-auto md:mx-0">
+        </div>
+      </div>
+
+      <div class="w-full py-10 md:py-20">
+        <div class="text-orange-500 font-bold text-sm uppercase">FAQ's</div>
+        <h2 class="text-4xl md:text-4xl font-bold leading-tight">
+          WHAT PEOPLE <span class="text-[#FF8000]">MORE ASKED</span> ABOUT?
+        </h2>
+        <div class="max-w-2xl mx-auto mt-10 md:p-0">
+
+          <div *ngFor="let faq of faqs; let i = index" [attr.data-wow-delay]="(i * 0.1) + 's'"
+            class="wow animate__animated animate__fadeInUp"
+            class=" wow animate__animated animate__fadeInUp mb-4 rounded-xl overflow-hidden shadow-sm">
+            <button (click)="toggleFaq(i)"
+              class="w-full flex justify-between items-center p-4 bg-white/5 backdrop-blur-lg hover:bg-[#FF8000] group transition-all duration-300">
+              <span class="text-left font-medium group-hover:text-white text-[#007ACC]">{{ faq.question }}</span>
+              <svg [ngClass]="{ 'rotate-180': activeFaq === i }"
+                class="w-5 h-5 text-gray-500 transition-transform duration-300" fill="none" stroke="#007ACC"
+                stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <div [ngClass]="{
+              'max-h-40 opacity-100 py-2 bg-[]': activeFaq === i,
+              'max-h-0 opacity-0 py-0': activeFaq !== i
+            }" class="px-4 text-white overflow-hidden transition-all duration-500 ease-in-out">
+              <p>{{ faq.answer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <!-- contact -->
+  <section id="contact" class=" text-white relative py-24 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row relative items-center justify-between gap-12">
+
+      <!-- left Form -->
+      <div class=" wow animate__animated animate__zoomIn lg:w-1/2 relative bg-gray/5 rounded-2xl backdrop-blur-lg p-0 md:p-8 w-full">
+        <h3 class="text-2xl md:text-2xl lg:text-4xl text-white font-bold mb-10">Request a <span
+            class="text-[#FF8000]">Quote</span></h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <input type="text" placeholder="First Name"
+            class="w-full px-4 py-3 rounded-lg bg-white/5 backdrop-blur-lg text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition" />
+          <input type="text" placeholder="Last Name"
+            class="  w-full px-4 py-3 rounded-lg bg-white/5 backdrop-blur-lg text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition" />
+
+        </div>
+        <input type="email" placeholder="Email"
+          class="  w-full px-4 py-3 rounded-lg bg-white/5 backdrop-blur-lg text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition" />
+        <input type="tel" placeholder="Phone"
+          class="mt-4  w-full px-4 py-3 rounded-lg bg-white/5 backdrop-blur-lg text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition" />
+
+        <textarea rows="4" placeholder="Leave a comment here"
+          class=" mt-4 w-full px-4 py-3 rounded-lg bg-white/5 backdrop-blur-lg text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-400 transition mb-4"></textarea>
+        <button class="bg-[#FF8000] text-white px-6 py-2 rounded hover:bg-orange-600 transition">Submit</button>
+      </div>
+
+      <!-- rigth Content -->
+      <div class="lg:w-1/2 z-10  wow animate__animated animate__fadeInLeft">
+        <p class="text-[#FF8000] uppercase font-semibold mb-8">___ Get A Quote</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          Plan Your Journey <br />
+          with Ease & <span class="text-[#FF8000] underline font-bold">Comfort.</span>
+        </h2>
+        <ul class="space-y-2 text-sm md:text-base">
+          <li class="flex items-start gap-2">
+            <span class="text-[#007ACC]">✤</span> Trusted Chauffeur Services Across the UK
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#007ACC]">✤</span> Affordable Luxury. Instant Quotes.
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#007ACC]">✤</span> Quick, Reliable & Professional Travel Planning
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-[#007ACC]">✤</span> Your Journey, Our Priority
+          </li>
+        </ul>
+        <!-- <button class="mt-6 bg-[#007ACC] text-white px-6 py-2 rounded hover:bg-orange-600 transition">Contact Us →</button> -->
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- footer -->
+  <div class="bg-gray-5 backdrop-blur-lg px-3 md:px-0 pt-10 md:pt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-10">
+        <div class="col-span-5">
+          <img src="assets/logo.png" class="w-[40%] md:w-[40%]" alt="" />
+          <p class="w-full lg:w-[80%] mt-4">
+            We are dedicated to up-lift manufacturers and educational
+            institutions through personalized growth, development, and
+            business solutions.
+          </p>
+          <div class="flex items-center">
+            <a href="https://www.facebook.com/boostlytic.org">
+              <i class="bi bi-facebook text-[#0866FF]"></i>
+            </a>
+            <a href="https://www.instagram.com/boostlytic">
+              <i class="bi bi-instagram text-[#E3010F] font-bold ml-2"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-span-2 mt-10 lg:mt-0">
+          <p class="text-lg font-bold text-[#E3010F]">Links</p>
+          <a href="#">
+            <p class="mt-7 font-semibold">Home</p>
+          </a>
+          <a href="#about">
+            <p class="mt-2 font-semibold">About</p>
+          </a>
+          <a href="#solution">
+            <p class="mt-2 font-semibold">Services</p>
+          </a>
+          <a href="#contact">
+            <p class="mt-2 font-semibold">Contact</p>
+          </a>
+        </div>
+        <div class="col-span-3 mt-10 ml-5 lg:ml-0 lg:mt-0">
+          <p class="text-lg font-bold text-[#E3010F]">Contact Us</p>
+          <p class="mt-7 font-semibold">Phone</p>
+          <p class="">+923282829300</p>
+          <p class="mt-2 font-semibold">Email</p>
+          <p class="">swbeueAgmail.com</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex-col justify-center flex items-center">
+      <div class="mt-10 border-t-2 border-[#FF8000] w-44 mx-auto"></div>
+      <p class="mt-2 mb-3 text-sm text-gray-500">© 2025 Micro Iniformatics. All rights reserved.</p>
+    </div>
+  </div>
+
+</div>

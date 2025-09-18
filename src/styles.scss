@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+      font-family: "Saira", sans-serif;
+}
+.bg-main{
+      background-image: url('/assets/bg.jpg');
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+}
+.box-shadow {
+  box-shadow: 0 4px 12px rgba(19, 131, 165, 0.4);
+
+}
